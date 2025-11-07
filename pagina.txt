@@ -1,0 +1,92 @@
+ EcoHuerta – Filterable Plant List
+
+Este proyecto es una versión práctica y sencilla de una huerta digital creada con **React**, donde podemos filtrar plantas según diferentes criterios. El objetivo es entender cómo funciona el flujo de datos en React, el uso del estado, los componentes y la importancia de una UI organizada y reutilizable.
+
+---
+
+ Análisis del Proyecto
+
+ ¿Cómo se aplica el flujo de datos unidireccional?
+En este proyecto, React utiliza un **flujo de datos unidireccional**, lo que quiere decir que la información siempre viaja en un solo sentido:
+**Del componente padre  hacia los componentes hijos usando props.**
+El componente principal controla los datos y los envía a los demás componentes para que solo se encarguen de mostrar la información. Esto evita desorden en el código y hace más fácil entender qué está pasando en cada parte de la app.
+
+---
+
+ ¿Qué papel cumple el estado (`useState`) y cómo influye en el renderizado?
+
+`useState` permite que los componentes puedan **guardar información y actualizarla** sin necesidad de recargar la página. Cada vez que el estado cambia, React vuelve a renderizar la parte necesaria para mostrar la nueva info.
+
+En este proyecto, `useState` se usa para:
+
+ Guardar lo que escribe el usuario en el buscador  
+ Manejar los filtros o categorías de las plantas  
+ Actualizar dinámicamente lo que se muestra  
+
+Gracias a esto, la app se siente interactiva, reactiva y moderna.
+
+---
+
+ ¿Por qué separar la UI en componentes reutilizables y puros?
+
+Dividir la UI en componentes ayuda a que el código sea:
+
+ Más limpio  
+ Más organizado  
+ Reutilizable  
+ Fácil de entender  
+
+Los componentes “puros” son aquellos que solo reciben datos mediante props, sin modificar información afuera. Esto ayuda a que la app sea predecible, fácil de probar y más profesional.
+
+---
+
+ Ventajas de JSX declarativo vs. DOM imperativo
+
+Con JSX describimos **lo que queremos ver**, y React se encarga de actualizarlo.  
+Esto es mucho más simple que el enfoque tradicional del DOM donde debemos decir paso a paso qué hacer.
+
+| Enfoque tradicional del DOM | JSX Declarativo |
+|------------------------------|-------------------------------|
+| Se indica paso a paso cómo cambiar el DOM | Solo describimos el resultado final |
+| Más código y más propenso a errores | Más claro y legible |
+| El desarrollador maneja el DOM | React optimiza automáticamente |
+
+JSX hace el código más elegante, fácil de mantener y cercano a cómo pensamos la UI.
+
+---
+
+ Mejoras realizadas: 3 nuevos componentes añadidos
+
+Para ampliar el proyecto sin perder su estilo ni romper su lógica, añadí estos 3 componentes nuevos:
+
+ Nuevos componentes:
+
+ PlantStats**
+Muestra estadísticas de la huerta como:
+- Número total de plantas
+- Cuántas son comestibles
+- Cuántas son ornamentales  
+Sirve para dar un resumen rápido de la huerta al usuario.
+
+PlantCardExpanded**
+Es una versión ampliada de la tarjeta de planta.  
+Al seleccionar una planta, muestra detalles adicionales como:
+- Tipo de luz
+- Riego recomendado
+- Consejos de cuidado  
+Hace la experiencia más completa y educativa.
+
+ThemeToggle**
+Permite cambiar entre **modo claro y oscuro**.  
+Usa `useState` para alternar el tema y aplicar estilos dinámicos.  
+Mejora la usabilidad y la estética de la app.
+
+---
+
+
+
+Creado con dedicación por **Manuel Carrillo** 
+
+---
+
+Siéntete libre de usar, mejorar y personalizar este proyecto. ¡Cada semilla de conocimiento cuenta! 😊
